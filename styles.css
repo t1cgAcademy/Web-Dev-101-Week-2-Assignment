@@ -1,0 +1,87 @@
+#milaTitle {
+    text-align: center;
+    background-color: #fff4b9;
+  }
+
+  body {
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+}
+
+  img {
+    width: 300px;
+    height: 400px;
+    border-radius: 50%;
+  
+    margin: auto;
+    width: 50%;
+    display: block;
+    padding: 10px;
+  }
+  iframe {
+    display: block;
+  }
+  #tableButton {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 16px;
+    padding: 6px;
+    border-radius: 10px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background-image: linear-gradient(
+      to right,
+      rgb(28, 110, 164) 0%,
+      rgb(35, 136, 203) 50%,
+      rgb(20, 78, 117) 100%
+    );
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+    border: 2px solid rgb(28, 110, 164);
+    display: inline-block;
+  }
+  #tableButton:hover {
+    background: #1c6ea4;
+  }
+  tableButton:active {
+    background: #144e75;
+  }
+  #milaPicture {
+    background: rgba(208, 228, 245, 0.56) url('https://htmlcheatsheet.com/images/logo-css.png') repeat-y scroll
+      500px 9px;
+    background-image: url('grandCanyon.png');
+    background-size: cover;
+  }
+
+  #tableButton {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 16px;
+    padding: 6px;
+    border-radius: 10px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background-image: linear-gradient(
+      to right,
+      rgb(28, 110, 164) 0%,
+      rgb(35, 136, 203) 50%,
+      rgb(20, 78, 117) 100%
+    );
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+    border: 2px solid rgb(28, 110, 164);
+    display: inline-block;
+  }
+  #tableButton:hover {
+    background: #1c6ea4;
+  }
+  #tableButton:active {
+    background: #144e75;
+  }
