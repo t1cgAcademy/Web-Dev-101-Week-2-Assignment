@@ -21,22 +21,19 @@ triviaFunc = () => {
 
 }
 
-trivia.addEventListener("click", function(){
-//call triviaFunc
-});
-
-videoButton.addEventListener("click", function(){
 //toggle celebrityPic and celebrityVideo classes with button functionality
-});
+toggleVideo = () => {
 
-tableButton.addEventListener("click", function(){
+}
+
+addMovieToTable = () => {
   const row = movieTable.insertRow(1);
   const cell1 = row.insertCell(0);
   // create variable to insert new cell similar to code above
   cell1.innerHTML = titleInput.value;
   // add yearInput value to cell you just created
   //call resetInputValues function;
-});
+};
 
 resetInputValues = () => {
   //define function to reset input values
