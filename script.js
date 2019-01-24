@@ -1,60 +1,119 @@
-const titleInput = document.getElementById("titleInput")
-const yearInput = document.getElementById("yearInput")
+questionArray = [
+  "What was Bruce Willis' first movie?   a: Die Hard, b: Look Who's Talking, c: The First Deadly Sin",
+  'What year was Bruce Willis Born?   a: 1971, b: 1955, c: 1963',
+  'In what state does Bruce Willis reside? a: California, b: Montana, c: Florida',
+];
+
+const titleInput = document.getElementById('titleInput');
+const yearInput = document.getElementById('yearInput');
+const triviaContent = document.getElementById('triviaContent');
+const triviaInput = document.getElementById('triviaInput');
+const answerButton = document.getElementById('answerButton');
+const answerResult = document.getElementById('answerResult');
+const nextQuestion = document.getElementById('nextQuestion');
+const resetGame = document.getElementById('resetGame');
+const willisVideo = document.getElementById('willisVideo');
+const willisPic = document.getElementById('willisPic');
 
 triviaFunc = () => {
-  const trivia = document.getElementById("trivia")
+  triviaContent.classList.toggle('classHidden');
+  triviaInput.classList.toggle('classHidden');
+  answerButton.classList.toggle('classHidden');
+  nextQuestion.classList.toggle('classHidden');
+  resetGame.classList.toggle('classHidden');
+  triviaContent.innerHTML = questionArray[0];
+};
 
-  alert("Please enter the letter for the corresponding answer.");
-  const value1 = prompt("What was Bruce Willis' first movie?   a: Die Hard, b: Look Who's Talking, c: The First Deadly Sin");
-  if (value1 === "c") {
-    alert("You got it right!");
-  } else {
-    alert("Incorrect, Please try again.")
-    triviaFunc();
+enterAnswer = () => {
+  answerResult.classList.toggle('classHidden');
+  switch (questionArray.indexOf(triviaContent.innerHTML)) {
+    case 0:
+      questionOneHandler();
+      break;
+    case 1:
+      questionTwoHandler();
+      break;
+    case 2:
+      questionThreeHandler();
+      break;
   }
+};
 
-  const value2 = prompt("What year was Bruce Willis Born?   a: 1971, b: 1955, c: 1963");
-  //use value collected from prompt, if else statements, operators, and alerts to handle trivia question
-  if (value2 === "b") {
-    alert("you got it right!")
+questionOneHandler = () => {
+  if (triviaInput.value === 'c') {
+    answerResult.innerHTML = 'Correct!';
   } else {
-    alert("Incorrect, Please try again")
-    triviaFunc();
+    nextQuestion.classList.toggle('classHidden');
+    answerResult.innerHTML = 'Incorrect, please reset game';
   }
+  resetInputValues();
+};
 
-
-  const value3 = prompt("In what state does Bruce Willis reside? a: California, b: Montana, c: Florida");
-  //use value collected from prompt, if else statements, operators, and alerts to handle trivia question
-  if (value3 === "a") {
-    alert("you got it right!")
+questionTwoHandler = () => {
+  if (triviaInput.value === 'b') {
+    answerResult.innerHTML = 'Correct!';
   } else {
-    alert("Incorrect, Please try again")
-    triviaFunc();
+    nextQuestion.classList.toggle('classHidden');
+    answerResult.innerHTML = 'Incorrect, please reset game';
   }
-}
+  resetInputValues();
+};
+
+questionThreeHandler = () => {
+  if (triviaInput.value === 'a') {
+    answerResult.innerHTML = 'Correct! You win the game';
+  } else {
+    nextQuestion.classList.toggle('classHidden');
+    answerResult.innerHTML = 'Incorrect, please reset game';
+  }
+  resetInputValues();
+  nextQuestion.classList.toggle('classHidden');
+};
+
+nextQuestionFunc = () => {
+  if (questionArray.indexOf(triviaContent.innerHTML) === 0) {
+    triviaContent.innerHTML = questionArray[1];
+    answerResult.classList.toggle('classHidden');
+  } else if (questionArray.indexOf(triviaContent.innerHTML) === 1) {
+    triviaContent.innerHTML = questionArray[2];
+    answerResult.classList.toggle('classHidden');
+  } else {
+    triviaContent.innerHTML = 'GAME OVER!!';
+  }
+};
 
 toggleHidden = () => {
-  const willisVideo = document.getElementById("willisVideo")
-  const willisPic = document.getElementById("willisPic")
-
-  willisVideo.classList.toggle("classHidden")
-  willisPic.classList.toggle("classHidden")
-}
+  willisVideo.classList.toggle('classHidden');
+  willisPic.classList.toggle('classHidden');
+  answerButton.classList.toggle('classHidden');
+};
 
 addRow = () => {
-  const movieTable = document.getElementById("movieTable")
+  const movieTable = document.getElementById('movieTable');
 
-  const row = movieTable.insertRow(1)
+  const row = movieTable.insertRow(1);
   const cell1 = row.insertCell(0);
   const cell2 = row.insertCell(1);
 
   cell1.innerHTML = titleInput.value;
   cell2.innerHTML = yearInput.value;
 
-  this.resetInputValues()
-}
+  this.resetInputValues();
+};
 
 resetInputValues = () => {
-  titleInput.value = "";
-  yearInput.value = "";
+  titleInput.value = '';
+  yearInput.value = '';
+  triviaInput.value = '';
+};
+
+resetGameFunc = () => {
+  triviaContent.classList.toggle('classHidden');
+  triviaInput.classList.toggle('classHidden');
+  answerButton.classList.toggle('classHidden');
+  answerResult.classList.toggle('classHidden');
+  resetGame.classList.toggle('classHidden');
+  triviaContent.innerHTML = '';
+  answerResult.innerHTML = '';
+  resetInputValues();
 };

@@ -1,3 +1,7 @@
+body {
+    background-color: lightblue;
+}
+
 #willisTitle {
     text-align: center;
     color: darkblue;
@@ -39,6 +43,24 @@ td {
     margin-right: auto;
 }
 
-body {
-    background-color: lightblue;
+#trivia,
+#triviaInput,
+#answerButton,
+#triviaContent,
+#nextQuestion,
+#resetGame {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#triviaButton,
+#titleInput,
+#yearInput,
+#videoButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
