@@ -1,0 +1,44 @@
+#willisTitle {
+    text-align: center;
+    color: darkblue;
+}
+
+table,
+th,
+td {
+    background-color: lightgreen;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#willisPic,
+#willisVideo {
+    height: 500px;
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.classHidden {
+    display: none !important;
+}
+
+#link {
+    text-align: center;
+}
+
+.date {
+    text-align: center;
+}
+
+.centerClass {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-color: lightblue;
+}

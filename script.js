@@ -1,40 +1,60 @@
-const videoButton = document.getElementById("videoButton");
-const seagalPic = document.getElementById("seagalPic");
-//create celebrityVideo, table Button, movieTable, titleInput, yearInput and trivia variables for DOM manipulation using above code as reference
-
+const titleInput = document.getElementById("titleInput")
+const yearInput = document.getElementById("yearInput")
 
 triviaFunc = () => {
+  const trivia = document.getElementById("trivia")
+
   alert("Please enter the letter for the corresponding answer.");
-  const value1 = prompt("What was Steven Seagal's first movie?   a: Above the Law, b: Under Siege, c: The Glimmer Man");
-  if(value1 === "a"){
+  const value1 = prompt("What was Bruce Willis' first movie?   a: Die Hard, b: Look Who's Talking, c: The First Deadly Sin");
+  if (value1 === "c") {
     alert("You got it right!");
   } else {
     alert("Incorrect, Please try again.")
     triviaFunc();
   }
 
-  const value2 = prompt("How old is Steven Seagal?   a: 57, b: 72, c: 65" );
+  const value2 = prompt("What year was Bruce Willis Born?   a: 1971, b: 1955, c: 1963");
   //use value collected from prompt, if else statements, operators, and alerts to handle trivia question
+  if (value2 === "b") {
+    alert("you got it right!")
+  } else {
+    alert("Incorrect, Please try again")
+    triviaFunc();
+  }
 
-  const value3 = prompt("What 2 martial arts forms does Seagal know? a: Akido, b: Muay Thai, c: Boxing, d: Judo");
+
+  const value3 = prompt("In what state does Bruce Willis reside? a: California, b: Montana, c: Florida");
   //use value collected from prompt, if else statements, operators, and alerts to handle trivia question
-
+  if (value3 === "a") {
+    alert("you got it right!")
+  } else {
+    alert("Incorrect, Please try again")
+    triviaFunc();
+  }
 }
 
-//toggle celebrityPic and celebrityVideo classes with button functionality
-toggleVideo = () => {
+toggleHidden = () => {
+  const willisVideo = document.getElementById("willisVideo")
+  const willisPic = document.getElementById("willisPic")
 
+  willisVideo.classList.toggle("classHidden")
+  willisPic.classList.toggle("classHidden")
 }
 
-addMovieToTable = () => {
-  const row = movieTable.insertRow(1);
+addRow = () => {
+  const movieTable = document.getElementById("movieTable")
+
+  const row = movieTable.insertRow(1)
   const cell1 = row.insertCell(0);
-  // create variable to insert new cell similar to code above
+  const cell2 = row.insertCell(1);
+
   cell1.innerHTML = titleInput.value;
-  // add yearInput value to cell you just created
-  //call resetInputValues function;
-};
+  cell2.innerHTML = yearInput.value;
+
+  this.resetInputValues()
+}
 
 resetInputValues = () => {
-  //define function to reset input values
+  titleInput.value = "";
+  yearInput.value = "";
 };
