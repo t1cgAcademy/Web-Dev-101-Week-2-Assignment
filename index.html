@@ -1,51 +1,46 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <title>academy</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous" />
-  <link rel=stylesheet href="./style.css" type="text/css" />
-  <title>academy</title>
-</head>
-
-<body>
-  <h2 id="willisTitle">Bruce Willis</h2>
-  <div><button onclick="triviaFunc()" class="centerClass" id="triviaButton">Play Trivia</button></div>
-  <h3 id="triviaContent" class="classHidden"></h3>
-  <!-- create an initially hidden h3 tag with id of answerResult -->
-  <!-- create an initially hidden input with the id of "triviaInput" -->
-  <button onclick="enterAnswer()" id="answerButton" class="classHidden">Enter Answer</button>
-  <!-- create an initially hidden button with nextQuestionFunc onclick function, id of nextQuestion -->
-  <!-- create an initially hidden button with resetGameFunc onclick function, id of resetGame -->
-  <!-- create image tag with id willisPic and appropriate source attribute for image display -->
-  <iframe id="willisVideo" class="classHidden" src="https://www.youtube.com/embed/g-P53rME1xE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe> 
-  <!-- create button with with toggleHidden onclick function, use CLASS to CENTER (hint), with id of video button -->
-  create h4 link to wikipedia page of your celebrity with id of link (remember nesting!!)
-  <h4 id="link"><a href="https://en.wikipedia.org/wiki/Bruce_Willis">your celebrity on Wikipedia</h4>
-  </a>
-  <table id="movieTable">
-    <tr>
-      <th>Movie Title</th>
-      <th>Year</th>
-    </tr>
-    <tr>
-      <td>Die Hard</td>
-      <td>1988</td>
-    </tr>
-    <tr>
-      <td>Unbreakable</td>
-      <td>2000</td>
-    </tr>
-  </table>
-  <input class="centerClass" id="titleInput" placeholder="title"></input>
-  <input class="centerClass" id="yearInput" placeholder="year"></input>
-  <button onclick="addRow()" class="centerClass" id="tableButton">Add Movie to Table</button>
-  <h3 class="date"><input class="date" type="date" /></h3>
-</body>
-<script src="./script.js"></script>
-
+  <body>
+    <!-- create title with your celebrity name and id of yourcelebritylastnameTitle (example: willisTitle) -->
+    <div><button onclick="triviaFunc()" class="centerClass" id="triviaButton">Play Trivia</button></div>
+    <h3 id="triviaContent" class="classHidden"></h3>
+    <!-- create an initially hidden h3 tag with id of answerResult -->
+    <!-- create an initially hidden input with the id of "triviaInput" -->
+    <button onclick="enterAnswer()" id="answerButton" class="classHidden">Enter Answer</button>
+    <!-- create an initially hidden button with nextQuestionFunc onclick function, id of nextQuestion -->
+    <!-- create an initially hidden button with resetGameFunc onclick function, id of resetGame -->
+    <!-- create image tag with id yourcelebritylastnamePic (example: willisPic) and appropriate source attribute for image display -->
+    <iframe
+      id="willisVideo"
+      class="classHidden"
+      src="https://www.youtube.com/embed/g-P53rME1xE"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <!-- create button with with toggleHidden onclick function, center element with centerClass style you will define in css file, with id of video button -->
+    <!-- create h4 link to wikipedia page of your celebrity with id of link (remember nesting!!) -->
+    <!-- use table, table row, table head, and table data tags to create table with two hard coded movie examples. ===>>
+  ===>>> Parent table tag must have id of movieTable.  There should be two columns, the first column should be movie title ===>>>
+  ===>>> The second column should be year.  Please provide two hard-coded movie examples that display right when site is loaded -->
+    <!-- create input centered using centerClass style you will define in css file, with id of titleInput and a placeholder of title -->
+    <!-- create input centered using centerClass style you will define in css file, with id of yearInput and a placeholder of year -->
+    <!-- create button with addRow onclick function, center using centerClass style you will define in css file, with id of tableButton -->
+    <!-- create input in h3, both tags must have class of date and input must display date picker -->
+  </body>
+  <script src="./script.js"></script>
 </html>
