@@ -1,119 +1,93 @@
+// Populate question array below with questions and answers about your celebrity
 questionArray = [
   "What was Bruce Willis' first movie?   a: Die Hard, b: Look Who's Talking, c: The First Deadly Sin",
   'What year was Bruce Willis Born?   a: 1971, b: 1955, c: 1963',
   'In what state does Bruce Willis reside? a: California, b: Montana, c: Florida',
 ];
 
-const titleInput = document.getElementById('titleInput');
-const yearInput = document.getElementById('yearInput');
-const triviaContent = document.getElementById('triviaContent');
-const triviaInput = document.getElementById('triviaInput');
-const answerButton = document.getElementById('answerButton');
-const answerResult = document.getElementById('answerResult');
-const nextQuestion = document.getElementById('nextQuestion');
-const resetGame = document.getElementById('resetGame');
-const willisVideo = document.getElementById('willisVideo');
-const willisPic = document.getElementById('willisPic');
+// Use getElementByID (you need to add something in front of that to use), to create
+// selectors for titleInput, yearInput, triviaContent, triviaInput, answerButton,
+// answerResult, nextQuestion, resetGame, celebrityVideo (willisVideo), celebrityPic (willisPic)
+
 
 triviaFunc = () => {
-  triviaContent.classList.toggle('classHidden');
-  triviaInput.classList.toggle('classHidden');
-  answerButton.classList.toggle('classHidden');
-  nextQuestion.classList.toggle('classHidden');
-  resetGame.classList.toggle('classHidden');
-  triviaContent.innerHTML = questionArray[0];
+  // Toggle 'classHidden' for triviaContent, triviaInput, answerButton, nextQuestion, and resetGame tags
+  // set the innerHTML of triviaContent to the first question in questionArray
+  // (hint: remember bracket notation)
 };
 
 enterAnswer = () => {
-  answerResult.classList.toggle('classHidden');
+  // Toggle classHidden of answerResult here
   switch (questionArray.indexOf(triviaContent.innerHTML)) {
     case 0:
-      questionOneHandler();
+      // Call first question handler
       break;
     case 1:
-      questionTwoHandler();
+      // Call second question handler
       break;
     case 2:
-      questionThreeHandler();
+      // Call third question handler
       break;
   }
 };
 
 questionOneHandler = () => {
-  if (triviaInput.value === 'c') {
-    answerResult.innerHTML = 'Correct!';
-  } else {
-    nextQuestion.classList.toggle('classHidden');
-    answerResult.innerHTML = 'Incorrect, please reset game';
-  }
+  //if the answer === 'c' then set the innerHTML of answerResult to 'Correct'
+  //If the user enters anything ELSE then first toggle classHidden on nextQuestion
+  //and set the innerHTML of answer result to 'Incorrect, please reset game'
+
+  //resetInputValues below should be called OUTSIDE of control structure
   resetInputValues();
 };
 
 questionTwoHandler = () => {
-  if (triviaInput.value === 'b') {
-    answerResult.innerHTML = 'Correct!';
-  } else {
-    nextQuestion.classList.toggle('classHidden');
-    answerResult.innerHTML = 'Incorrect, please reset game';
-  }
-  resetInputValues();
+  //Use instructions from questionOneHandler as guide here
 };
 
 questionThreeHandler = () => {
-  if (triviaInput.value === 'a') {
-    answerResult.innerHTML = 'Correct! You win the game';
-  } else {
-    nextQuestion.classList.toggle('classHidden');
-    answerResult.innerHTML = 'Incorrect, please reset game';
-  }
-  resetInputValues();
+  //Use instructions from questionOneHandler as guide here
+  // toggle class hidden below should be OUTSIDE of control structure
   nextQuestion.classList.toggle('classHidden');
 };
 
 nextQuestionFunc = () => {
   if (questionArray.indexOf(triviaContent.innerHTML) === 0) {
-    triviaContent.innerHTML = questionArray[1];
-    answerResult.classList.toggle('classHidden');
+    // set triviaContent innerHTML to the second question in the array
+    // toggle classHidden for answerResult
   } else if (questionArray.indexOf(triviaContent.innerHTML) === 1) {
-    triviaContent.innerHTML = questionArray[2];
-    answerResult.classList.toggle('classHidden');
+    // set triviaContent innerHTML to the third question in the array
+    // toggle classHidden for answerResult
   } else {
-    triviaContent.innerHTML = 'GAME OVER!!';
+    // Use triviaContent innerHTML to alert user 'GAME OVER!!'
   }
 };
 
 toggleHidden = () => {
-  willisVideo.classList.toggle('classHidden');
-  willisPic.classList.toggle('classHidden');
-  answerButton.classList.toggle('classHidden');
+  // toggle classHidden for celebrityVideo (willisVideo), celebrityPic (willisPic), and the answerButton
 };
 
 addRow = () => {
   const movieTable = document.getElementById('movieTable');
-
+  // Use getElementById to create selector for movieTable
+  // Create row variable that inserts 1 row into movie table
   const row = movieTable.insertRow(1);
-  const cell1 = row.insertCell(0);
-  const cell2 = row.insertCell(1);
+  // Create cell1 variable that inserts a table cell into the first index of row
+  // Create cell2 variable that inserts a table cell into the first index of row
 
-  cell1.innerHTML = titleInput.value;
-  cell2.innerHTML = yearInput.value;
+  // Set innerHTML of cell1 to the value of title Input (hint dot notation + value)
+  // Set innerHTML of cell2 to the value of title Input (hint dot notation + value)
 
   this.resetInputValues();
 };
 
 resetInputValues = () => {
-  titleInput.value = '';
-  yearInput.value = '';
-  triviaInput.value = '';
+  // reset titleInput, yearInput, and triviaInput values to empty strings
 };
 
 resetGameFunc = () => {
-  triviaContent.classList.toggle('classHidden');
-  triviaInput.classList.toggle('classHidden');
-  answerButton.classList.toggle('classHidden');
-  answerResult.classList.toggle('classHidden');
-  resetGame.classList.toggle('classHidden');
-  triviaContent.innerHTML = '';
-  answerResult.innerHTML = '';
-  resetInputValues();
+  // toggle class hidden for triviaContent, triviaInput, answerButton, answerResult
+  // and resetGame
+  // reset triviaContent and answerResult innerHTML to empty strings
+
+  // reset the input values here
 };
