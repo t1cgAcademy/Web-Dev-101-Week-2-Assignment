@@ -45,11 +45,11 @@ GOOGLE IS YOUR FRIEND!!!
     Clone your repo with what ever name you like typing git clone followed by the link and
     then the new name of your repo
 
-    `git clone https://github.com/t1cgAcademy/Web-Dev-101-Week-1-Assignment.git whateverNameYouWantHere`
+    `git clone https://github.com/t1cgAcademy/Web-Dev-101-Week-2-Assignment.git whateverNameYouWantHere`
 
     Or you can simply clone the repo and get the default name
 
-    `git clone https://github.com/t1cgAcademy/Web-Dev-101-Week-1-Assignment.git`
+    `git clone https://github.com/t1cgAcademy/Web-Dev-101-Week-2-Assignment.git`
 
     Open your cloned code in Atom or Visual Studio Code
 
@@ -57,12 +57,7 @@ GOOGLE IS YOUR FRIEND!!!
 
     If the above opening command does not work, you can manually open using your graphical user interface
 
-4)  Sanity Check!!! It is always important to make sure that your code will run as
-    intended by entering something simple. Here, we want to make sure that the http server (live-server)
-    we downloaded from NPM will run our simple HTML shell. In your index.html file, inside
-    the body tag, enter the following line...
-
-- `<div>Hello World</div>`
+4)  Sanity Check!!! Change a simply html element...
 
 5. Press `command s` on your keyboard to save the changes.
 
@@ -74,7 +69,7 @@ GOOGLE IS YOUR FRIEND!!!
 
 8. Go to your browser and enter the following address with the appropriate port... `http://localhost:[someport]/`
 
-Now you should be able to see your "Hello World" in the upper left hand corner of your browser.
+Now you should be able to see your your changes.
 
 Congratulations! You have just run your first HTML code. Now, get into `alpha`, follow the instructional
 comments and get coding.
