@@ -16,6 +16,12 @@ that will add this information to the table.
 You will also create a button that will toggle between showing a photo and a video clip
 of your celebrity on youtube.
 
+## Extra tasks
+
+1. You will be creating a button that will delete the last row from the movieTable
+2. You will be creating a message board with post functionality
+3. You will add the ability to delete individual posts on click
+
 ### Tips:
 
 Remember your sanity check! It is always important to make sure that your files are
