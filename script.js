@@ -7,7 +7,9 @@ questionArray = [
 
 // Use getElementByID (you need to add something in front of that to use), to create
 // selectors for titleInput, yearInput, triviaContent, triviaInput, answerButton,
-// answerResult, nextQuestion, resetGame, celebrityVideo (willisVideo), celebrityPic (willisPic)
+// answerResult, nextQuestion, resetGame, celebrityVideo (willisVideo), celebrityPic (willisPic),
+// movieTable and messageContainer
+
 
 
 triviaFunc = () => {
@@ -67,8 +69,6 @@ toggleHidden = () => {
 };
 
 addRow = () => {
-  const movieTable = document.getElementById('movieTable');
-  // Use getElementById to create selector for movieTable
   // Create row variable that inserts 1 row into movie table
   const row = movieTable.insertRow(1);
   // Create cell1 variable that inserts a table cell into the first index of row
@@ -91,3 +91,23 @@ resetGameFunc = () => {
 
   // reset the input values here
 };
+
+deleteRow = () => {
+  // Initialize a variable called rowCount set to the number of rows in the movieTable...
+  //   -This ^^ is not as hard as you might think.  Time to practice googling!!
+  // Delete row from movie table.  There is a special method used for this, which will 
+  // require the index number of the last row, no matter what the size of the table is (how many rows it has)
+}
+
+postMessage = () => {
+  // Initialize a variable called comment and set it to the value of the text area tag 
+  // using the text area id, which is 'message'
+  // Initialize a variable called newMessage set to a newly createdElement("P"), in
+  // other words, whenever this variable is used, it will create a new P tag.
+  // Set the id of your new p tag to "messageCard" whenever it is created
+  // Set the innerHTML of your new p tag to display desired content.  All new p tags 
+  // should display the date (You have already figured this out) + ":" + comment
+  // Add an onclick function called deleteMessage that deletes the message that is clicked on
+  // Finally, add your new message to messageContainer. (hint: do this outside of deleteMessage
+  // function)
+}

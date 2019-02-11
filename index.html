@@ -1,64 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./style.css" type="text/css" />
-    <title>academy</title>
-  </head>
-
-  <body>
-    <h2 id="willisTitle">Bruce Willis</h2>
-    <!-- add onclick event with triviaFunc() function call to button below -->
-    <div><button button here class="centerClass" id="triviaButton">Play Trivia</button></div>
-    <!-- adding h3 below will show the trivia question when button is clicked -->
-    <h3 id="triviaContent" class="classHidden"></h3>
-    <!-- create an initially hidden h3 tag with id of answerResult -->
-    <!-- create an initially hidden input with the id of "triviaInput" -->
-    <button onclick="enterAnswer()" id="answerButton" class="classHidden">Enter Answer</button>
-    <!-- create an initially hidden button with nextQuestionFunc onclick function, id of nextQuestion -->
-    <!-- create an initially hidden button with resetGameFunc onclick function, id of resetGame -->
-    <img
-      id="willisPic"
-      src="https://media1.popsugar-assets.com/files/thumbor/YV2j-X1eYl0l9wqGdaBEUMLybWc/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/09/28/978/n/1922398/77584ec84c411c52_GettyImages-105277481_master/i/Bruce-Willis-Hot-Pictures.jpg"
-    />
-    <iframe
-      id="willisVideo"
-      class="classHidden"
-      src="https://www.youtube.com/embed/g-P53rME1xE"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-    <!-- add onlick event with toggleHidden() function call to button below -->
-    <button class="centerClass" id="videoButton">Picture Video Toggle</button>
-    <h4 id="link"><a href="https://en.wikipedia.org/wiki/Bruce_Willis">your celebrity on Wikipedia</a></h4>
-    <table id="movieTable">
-        <tr>
-           <th>Movie Title</th>
-           <th>Year</th>
-        </tr>
-        <tr>
-           <td>Die Hard</td>
-           <td>1988</td>
-        </tr>
-        <tr>
-           <td>Unbreakable</td>
-           <td>2000</td>
-        </tr>
-     </table>
-     <input class="centerClass" id="titleInput" placeholder="title"></input>
-     <input class="centerClass" id="yearInput" placeholder="year"></input>
-     <!-- add onclick event with addRow() function call to tableButton below -->
-     <button class="centerClass" id="tableButton">Add Movie to Table</button>
-     <h3 class="date"><input class="date" type="date" /></h3>
-  </body>
-  <script src="./script.js"></script>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width" />
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+      <link
+         rel="stylesheet"
+         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+         crossorigin="anonymous"
+         />
+      <link rel="stylesheet" href="./style.css" type="text/css" />
+      <title>academy</title>
+   </head>
+   <body>
+      <h2 id="willisTitle">Bruce Willis</h2>
+      <!-- add onclick event with triviaFunc() function call to button below -->
+      <div><button button here class="centerClass" id="triviaButton">Play Trivia</button></div>
+      <!-- adding h3 below will show the trivia question when button is clicked -->
+      <h3 id="triviaContent" class="classHidden"></h3>
+      <!-- create an initially hidden h3 tag with id of answerResult -->
+      <!-- create an initially hidden input with the id of "triviaInput" -->
+      <button onclick="enterAnswer()" id="answerButton" class="classHidden">Enter Answer</button>
+      <!-- create an initially hidden button with nextQuestionFunc onclick function, id of nextQuestion -->
+      <!-- create an initially hidden button with resetGameFunc onclick function, id of resetGame -->
+      <img
+         id="willisPic"
+         src="https://media1.popsugar-assets.com/files/thumbor/YV2j-X1eYl0l9wqGdaBEUMLybWc/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/09/28/978/n/1922398/77584ec84c411c52_GettyImages-105277481_master/i/Bruce-Willis-Hot-Pictures.jpg"
+         />
+      <iframe
+         id="willisVideo"
+         class="classHidden"
+         src="https://www.youtube.com/embed/g-P53rME1xE"
+         frameborder="0"
+         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen
+         ></iframe>
+      <!-- add onlick event with toggleHidden() function call to button below -->
+      <button class="centerClass" id="videoButton">Picture Video Toggle</button>
+      <!-- <add section tag with class messageBoard>
+         <add div with class of title here>
+           Add h2 with text content set to display "Post a Message"
+         </close title div tag>
+         <Add text area tag with id of message and type set to text.  Put a self closing live break tag right 
+         after text area on same line.>
+         <Add an input tag with value set to "Submit" and an onclick set to postMessage()...
+         Your input tag muyst also have type set to button and class set to submitButton>
+         <Create div tag with id displayArea>
+           <Create h3 tag with text set to display "Messages:"></close h3>
+           <Create div with class messageContainer and id messageContainer></close message container div>
+         </closing messageContainer div>
+         </close section tag> -->
+      <h4 id="link"><a href="https://en.wikipedia.org/wiki/Bruce_Willis">your celebrity on Wikipedia</a></h4>
+      <table id="movieTable">
+         <tr>
+            <th>Movie Title</th>
+            <th>Year</th>
+         </tr>
+         <tr>
+            <td>Die Hard</td>
+            <td>1988</td>
+         </tr>
+         <tr>
+            <td>Unbreakable</td>
+            <td>2000</td>
+         </tr>
+      </table>
+      <input class="centerClass" id="titleInput" placeholder="title"></input>
+      <input class="centerClass" id="yearInput" placeholder="year"></input>
+      <!-- add onclick event with addRow() function call to tableButton below -->
+      <button class="centerClass" id="tableButton">Add Movie to Table</button>
+      <!-- Add button with onclick set to deleteRow() function call with class
+         centerClass, id tableButton and text set to display "Delete Last Movie" -->
+      <h3 class="date"><input class="date" type="date" /></h3>
+      <footer>
+         <p>Posted by: Steve Flint</p>
+         <p>Contact information: <a href="mailto:steve.flint@t1cg.com">
+            steve.flint@t1cg.com</a>.
+         </p>
+      </footer>
+      <script src="./script.js"></script>
+   </body>
 </html>
