@@ -14,6 +14,8 @@ const nextQuestion = document.getElementById('nextQuestion');
 const resetGame = document.getElementById('resetGame');
 const willisVideo = document.getElementById('willisVideo');
 const willisPic = document.getElementById('willisPic');
+const movieTable = document.getElementById('movieTable');
+const displayArea = document.getElementById('messageContainer')
 
 triviaFunc = () => {
   triviaContent.classList.toggle('classHidden');
@@ -85,13 +87,11 @@ nextQuestionFunc = () => {
 toggleHidden = () => {
   willisVideo.classList.toggle('classHidden');
   willisPic.classList.toggle('classHidden');
-  answerButton.classList.toggle('classHidden');
 };
 
 addRow = () => {
-  const movieTable = document.getElementById('movieTable');
-
-  const row = movieTable.insertRow(1);
+  const rowCount = movieTable.rows.length;
+  const row = movieTable.insertRow(rowCount);
   const cell1 = row.insertCell(0);
   const cell2 = row.insertCell(1);
 
@@ -117,3 +117,19 @@ resetGameFunc = () => {
   answerResult.innerHTML = '';
   resetInputValues();
 };
+
+deleteRow = () => {
+  const rowCount = movieTable.rows.length;
+  movieTable.deleteRow(rowCount - 1)
+}
+
+postMessage = () => {
+  const comment = document.getElementById('message').value;
+  const newMessage = document.createElement("P");
+  newMessage.id = "messageCard"
+  newMessage.innerHTML = new Date() + ": " + comment
+  newMessage.onclick = deleteMessage = () => {
+    newMessage.parentNode.removeChild(newMessage);
+  }
+  displayArea.append(newMessage);
+}

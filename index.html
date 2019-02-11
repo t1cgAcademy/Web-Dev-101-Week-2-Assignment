@@ -24,6 +24,23 @@
   <iframe id="willisVideo" class="classHidden" src="https://www.youtube.com/embed/g-P53rME1xE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
   <button onclick="toggleHidden()" class="centerClass" id="videoButton">Picture Video Toggle</button>
+
+  <section class="message-board">
+    <div class="title">
+        <h2>
+            Post a Message
+        </h2>
+    </div>
+    <textarea id="message" type="text"></textarea><br/>
+    <input value="Submit" onclick="postMessage()" type="button" class="submit-btn">
+    <div id="displayArea">
+      <h3>Messages:</h3>
+      <div class="messageContainer" id="messageContainer">
+
+      </div>
+    </div>
+</section>
+
   <h4 id="link"><a href="https://en.wikipedia.org/wiki/Bruce_Willis">your celebrity on Wikipedia</a></h4>
   
   <table id="movieTable">
@@ -43,8 +60,15 @@
   <input class="centerClass" id="titleInput" placeholder="title"></input>
   <input class="centerClass" id="yearInput" placeholder="year"></input>
   <button onclick="addRow()" class="centerClass" id="tableButton">Add Movie to Table</button>
+  <button onclick="deleteRow()" class="centerClass" id="tableButton">Delete Last Movie</button>
   <h3 class="date"><input class="date" type="date" /></h3>
+  
 </body>
+<footer>
+  <p>Posted by: Steve Flint</p>
+  <p>Contact information: <a href="mailto:steve.flint@t1cg.com">
+  steve.flint@t1cg.com</a>.</p>
+</footer>
 <script src="./script.js"></script>
 
 </html>
