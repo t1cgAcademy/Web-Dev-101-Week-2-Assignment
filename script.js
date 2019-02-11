@@ -15,7 +15,7 @@ const resetGame = document.getElementById('resetGame');
 const willisVideo = document.getElementById('willisVideo');
 const willisPic = document.getElementById('willisPic');
 const movieTable = document.getElementById('movieTable');
-const displayArea = document.getElementById('messageContainer')
+const messageContainer = document.getElementById('messageContainer')
 
 triviaFunc = () => {
   triviaContent.classList.toggle('classHidden');
@@ -131,5 +131,5 @@ postMessage = () => {
   newMessage.onclick = deleteMessage = () => {
     newMessage.parentNode.removeChild(newMessage);
   }
-  displayArea.append(newMessage);
+  messageContainer.append(newMessage);
 }
