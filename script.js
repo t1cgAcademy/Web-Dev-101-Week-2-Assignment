@@ -118,7 +118,7 @@ resetGameFunc = () => {
   resetInputValues();
 };
 
-deleteRow = () => {
+deleteRowFunc = () => {
   const rowCount = movieTable.rows.length;
   movieTable.deleteRow(rowCount - 1)
 }
