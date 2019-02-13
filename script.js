@@ -92,7 +92,7 @@ resetGameFunc = () => {
   // reset the input values here
 };
 
-deleteRow = () => {
+deleteRowFunc = () => {
   // Initialize a variable called rowCount set to the number of rows in the movieTable...
   //   -This ^^ is not as hard as you might think.  Time to practice googling!!
   // Delete row from movie table.  There is a special method used for this, which will 
