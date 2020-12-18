@@ -1,21 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./style.css" type="text/css" />
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width" />
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+      <link
+         rel="stylesheet"
+         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+         crossorigin="anonymous"
+         />
+      <link rel="stylesheet" href="./style.css" type="text/css" />
+      <title>academy</title>
+   </head>
+   <body>
+      <h2 id="willisTitle">Bruce Willis</h2>
+      <div><button button onclick="triviaFunc()" class="centerClass" id="triviaButton">Play Trivia</button></div>
+      <h3 id="triviaContent" class="classHidden"></h3>
+      <h3 id="answerResult" class="classHidden"></h3>
+      <input id="triviaInput" class="classHidden" />
+      <button onclick="enterAnswer()" id="answerButton" class="classHidden">Enter Answer</button>
+      <button onclick="nextQuestionFunc()" id="nextQuestion" class="classHidden">Next Question</button>
+      <button onclick="resetGameFunc()" id="resetGame" class="classHidden">reset Game</button>
+      <img
+         id="willisPic"
+         src="https://media1.popsugar-assets.com/files/thumbor/YV2j-X1eYl0l9wqGdaBEUMLybWc/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/09/28/978/n/1922398/77584ec84c411c52_GettyImages-105277481_master/i/Bruce-Willis-Hot-Pictures.jpg"
+         />
+      <iframe
+         id="willisVideo"
+         class="classHidden"
+         src="https://www.youtube.com/embed/g-P53rME1xE"
+         frameborder="0"
+         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen
+         ></iframe>
+      <button onclick="toggleHidden()" class="centerClass" id="videoButton">Picture Video Toggle</button>
+      
+      <section class="messageBoard">
+         <div class="title">
+            <h2>Post a Message</h2>
+         </div>
+         <textarea id="message" type="text"></textarea><br/>
+         <input value="Submit" onclick="postMessage()" type="button" class="submitButton" />
+         <div id="displayArea">
+            <h3>Messages:</h3>
+            <div class="messageContainer" id="messageContainer"></div>
+         </div>
+         </section>
 
-    <title>academy</title>
-  </head>
-
-  <body>
-    <script src="script.js"></script>
-  </body>
+      <h4 id="link"><a href="https://en.wikipedia.org/wiki/Bruce_Willis">your celebrity on Wikipedia</a></h4>
+      <table id="movieTable">
+         <tr>
+            <th>Movie Title</th>
+            <th>Year</th>
+         </tr>
+         <tr>
+            <td>Die Hard</td>
+            <td>1988</td>
+         </tr>
+         <tr>
+            <td>Unbreakable</td>
+            <td>2000</td>
+         </tr>
+      </table>
+      <input class="centerClass" id="titleInput" placeholder="title"></input>
+      <input class="centerClass" id="yearInput" placeholder="year"></input>
+      <button onclick="addRow()" class="centerClass" id="tableButton">Add Movie to Table</button>
+      <button onclick="deleteRowFunc()" class="centerClass" id="tableButton">Delete last movie</button>
+      <h3 class="date"><input class="date" type="date" /></h3>
+      <footer>
+         <p>Posted by: Anna Grover</p>
+         <p>Contact information: <a href="mailto:anna.grover@t1cg.com">
+            anna.grover@t1cg.com</a>.
+         </p>
+      </footer>
+      <script src="./script.js"></script>
+   </body>
 </html>
